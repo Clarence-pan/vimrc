@@ -4,6 +4,17 @@
 " * / #      -- 快速查找位于光标位置的单词（全词匹配）。
 " g~w        -- 切换大小写至单词结束
 "
+" 补全
+" -----
+"  <c-n>
+"  <c-p>       -- 这两个是字典补全
+"
+" 查找
+" -----
+"  :vimgrep /pattern/gj path/to/files 
+"
+"
+"
 " 配置
 " ==================== 
 "Tlist -- tag list
@@ -39,7 +50,7 @@ set hlsearch
 colorscheme delek 
 
 "传说中的去掉边框用下边这一句 
-set go= 
+"set go= 
 
 "打开语法高亮 
 syntax on 
@@ -61,7 +72,9 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,chinese,cp936
-language messages zh_CN.utf-8
+language messages en_US.utf-8
+set langmenu=en_US.utf-8
+let $LANG= 'en_US.utf-8'
 
 "很多插件都会要求的配置检测文件类型 
 :filetype on 
@@ -156,10 +169,15 @@ map <F6>   <esc><c-w>w
 map <s-F6> <esc><c-w>p
 map <a-F6>   <esc><c-w>h
 map <a-s-F6> <esc><c-w>l
+
 "  切换tag list窗口
 map <c-F6> <esc>:Tlist<cr>
+
 "  关闭当前窗口
 map <c-F4> <esc><c-w>c
+
+"  调出符号ts命令
+map <c-N> <esc>:ts 
 
 "  兼容windows风格的保存
 map <c-s>  <esc>:w<cr>
