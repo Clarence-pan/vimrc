@@ -50,7 +50,7 @@ set hlsearch
 colorscheme delek 
 
 "传说中的去掉边框用下边这一句 
-"set go= 
+set go= 
 
 "打开语法高亮 
 syntax on 
@@ -73,8 +73,9 @@ set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,chinese,cp936
 language messages en_US.utf-8
-set langmenu=en_US.utf-8
-let $LANG= 'en_US.utf-8'
+set langmenu=en_US
+let $LANG='en_US.utf-8'
+let LANG='en_US.utf-8'
 
 "很多插件都会要求的配置检测文件类型 
 :filetype on 
