@@ -1,7 +1,8 @@
 " VIM使用技巧
 " ==============
 " :e #n      -- 编辑buffer中的第n个文件，可以通过:ls查看buffer列表
-"
+" * / #      -- 快速查找位于光标位置的单词（全词匹配）。
+" g~w        -- 切换大小写至单词结束
 "
 " 配置
 " ==================== 
@@ -50,11 +51,12 @@ set backspace=indent,eol,start
 "set expandtab  " 暂时不要扩展
 
 "有时中文会显示乱码，用一下几条命令解决 
-"set encoding=utf-8
-"let &termencoding=&encoding 
-"set termencoding=cp
-"set fileencodings=utf-8,gbk 
-set fileencodings=utf-8
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,chinese,cp936
+language messages zh_CN.utf-8
+
 "很多插件都会要求的配置检测文件类型 
 :filetype on 
 :filetype plugin on 
