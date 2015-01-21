@@ -8,7 +8,10 @@
 "Tlist -- tag list
 let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的    
 let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim   
-let Tlist_Ctags_Cmd="/usr/bin/ctags" "将taglist与ctags关联  
+"let Tlist_Ctags_Cmd="/usr/bin/ctags" "将taglist与ctags关联  
+"let Tlist_Ctags_Cmd='d:\usr\bin\ctags.exe' " for windows
+let Tlist_Ctags_Cmd='ctags' " for windows
+let Tlist_Auto_Highlight_Tag=0       " 不要自动去高亮当前的tag
 
 " line number
 set nu 								"显示行号number
@@ -132,6 +135,8 @@ map <s-F3>  <esc>:Rgrep<cr>
 map <a-F3>  <esc>:GrepBuffer<cr>
 
 
+
+
 " 自定义键映射
 " -----------------
 "  打开windows下的vim配置文件
@@ -139,11 +144,22 @@ map <F12> :e ~/_vimrc<cr>
 "  切换窗口
 map <F4>   <esc><c-w>j
 map <s-F4> <esc><c-w>k
+map <F6>   <esc><c-w>w
+map <s-F6> <esc><c-w>p
+map <a-F6>   <esc><c-w>h
+map <a-s-F6> <esc><c-w>l
+"  切换tag list窗口
+map <c-F6> <esc>:Tlist<cr>
+"  关闭当前窗口
+map <c-F4> <esc><c-w>c
+
 "  兼容windows风格的保存
 map <c-s>  <esc>:w<cr>
 "  快速向下翻页
 map <a-space> <esc><c-d>
+map <space> <esc><c-d>
 map <s-space> <esc><c-u>
+map <c-space> <esc><c-u>
 
 " 调试期间为了方便查找vim的tag
 set tags=./tags,tags,d:\software\vim\vimfiles\tags
