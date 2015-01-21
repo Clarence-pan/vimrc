@@ -28,7 +28,7 @@ set hlsearch
 colorscheme delek 
 
 "传说中的去掉边框用下边这一句 
-set go= 
+"set go= 
 
 "打开语法高亮 
 syntax on 
@@ -56,6 +56,31 @@ set fileencodings=utf-8,gbk
 :autocmd FileType python :set number 
 :autocmd FileType python : set foldmethod=syntax 
 :autocmd FileType python :set smartindent 
+
+
+"真的很smart,
+"搜索时全小写相当于不区分大小写，只要有一个大写字母出现，则区分大小写
+""simple idea, great achievement!
+set ignorecase smartcase
+
+"启动gVIM时最大化
+au GUIEnter * simalt ~x
+
+
+"默认字体为Lucida Console，字体大小为11，粗体（个人认为比Fixsys爽一点）
+set guifont=Lucida_Console
+
+"mini buffer 插件配置
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+
+
+
+" 帮助语言中文
+set helplang=cn
 
 
 
