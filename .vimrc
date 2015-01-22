@@ -203,8 +203,8 @@ map <s-space> <esc><c-u>
 map <c-space> <esc><c-u>
 
 "  git operations
-nmap \gd :! git diff<cr>
-nmap \gc :! git add % && git commit <cr>
+nmap \gd :! git diff %<cr>
+nmap \gc :! git commit %<cr>
 
 " 调试期间为了方便查找vim的tag
 set tags=./tags,tags,d:\software\vim\vimfiles\tags
