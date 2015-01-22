@@ -17,6 +17,15 @@
 "
 " 配置
 " ==================== 
+" 区分windows和linux
+if has('win32')
+	let	g:isWindows=1
+	let g:isLinux=0
+else
+	let	g:isLinux=1
+	let g:isWindows=0
+endif
+
 "Tlist -- tag list
 let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的    
 let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim   
@@ -47,7 +56,7 @@ set hlsearch
 
 " 配色
 " color
-colorscheme delek 
+colorscheme desert
 
 "传说中的去掉边框用下边这一句 
 set go= 
@@ -162,7 +171,12 @@ map <a-F3>  <esc>:GrepBuffer<cr>
 " 自定义键映射
 " -----------------
 "  打开windows下的vim配置文件
-map <F12> :e ~/_vimrc<cr>
+if g:isWindows
+	map <F12> <esc>:e ~/_vimrc<cr>
+else
+	map <F12> <esc>:e ~/.vimrc<cr>
+endif
+
 "  切换窗口
 map <F4>   <esc><c-w>j
 map <s-F4> <esc><c-w>k
