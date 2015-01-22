@@ -17,6 +17,15 @@
 "
 " 配置
 " ==================== 
+" windows or linux?
+if has('unix')
+	let g:isLinux=1
+	let g:isWindows=0
+else
+	let g:isLinux=0
+	let g:isWindows=1
+endif
+
 "Tlist -- tag list
 let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的    
 let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim   
@@ -162,7 +171,11 @@ map <a-F3>  <esc>:GrepBuffer<cr>
 " 自定义键映射
 " -----------------
 "  打开windows下的vim配置文件
-map <F12> :e ~/_vimrc<cr>
+if g:isLinux
+	map <F12> :e ~/.vimrc<cr>
+else
+	map <F12> :e ~/_vimrc<cr>
+endif
 "  切换窗口
 map <F4>   <esc><c-w>j
 map <s-F4> <esc><c-w>k
