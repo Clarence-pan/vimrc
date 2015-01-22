@@ -57,7 +57,7 @@ set hlsearch
 
 " 配色
 " color
-colorscheme delek 
+colorscheme desert
 
 "传说中的去掉边框用下边这一句 
 set go= 
