@@ -36,6 +36,7 @@ let Tlist_Auto_Highlight_Tag=0       " 不要自动去高亮当前的tag
 
 " line number
 set nu 								"显示行号number
+set rnu 							"relative number
 
 " intend and tabstop
 "设置缩进有三个取值cindent(c风格)、smartindent(智能模式，其实不觉得有什么智能)、autoindent(简单的与上一行保持一致) 
