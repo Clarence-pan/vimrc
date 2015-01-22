@@ -175,11 +175,9 @@ noremap <a-F3>  <esc>:GrepBuffer<cr>
 " 自定义键映射
 " -----------------
 "  打开windows下的vim配置文件
-if g:isLinux
-	noremap <F12> :e ~/.vimrc<cr>
-else
-	noremap <F12> :e ~/_vimrc<cr>
-endif
+noremap <leader>er :split $MYVIMRC<cr>20<C-w>+
+noremap <F12> :split $MYVIMRC<cr>20<C-w>+
+noremap <leader>sr :source $MYVIMRC<cr>
 "  切换窗口
 noremap <F4>   <esc><c-w>j
 noremap <s-F4> <esc><c-w>k
