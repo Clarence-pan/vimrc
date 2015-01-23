@@ -13,10 +13,22 @@
 " -----
 "  :vimgrep /pattern/gj path/to/files 
 "
+" 切换大小写
+" ------------
+"  <visual-mode>:   u -> 小写 U -> 大写
 "
 "
 " 配置
 " ==================== 
+" windows or linux?
+if has('unix')
+	let g:isLinux=1
+	let g:isWindows=0
+else
+	let g:isLinux=0
+	let g:isWindows=1
+endif
+
 "Tlist -- tag list
 let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的    
 let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim   
@@ -27,6 +39,7 @@ let Tlist_Auto_Highlight_Tag=0       " 不要自动去高亮当前的tag
 
 " line number
 set nu 								"显示行号number
+set rnu 							"relative number
 
 " intend and tabstop
 "设置缩进有三个取值cindent(c风格)、smartindent(智能模式，其实不觉得有什么智能)、autoindent(简单的与上一行保持一致) 
@@ -47,7 +60,7 @@ set hlsearch
 
 " 配色
 " color
-colorscheme delek 
+colorscheme desert
 
 "传说中的去掉边框用下边这一句 
 set go= 
@@ -122,7 +135,7 @@ let g:miniBufExplModSelTarget = 1
 "  		(<Leader>一般是\)
 "    <Leader>m   切换高亮（匹配光标下的文字）
 "    <Leader>r   切换高亮（使用正则匹配）
-map <F8> <Plug>MarkSet
+noremap <F8> <Plug>MarkSet
 
 
 " Grep 插件     -- wtf: grep还没有vimgrep好用
@@ -152,9 +165,9 @@ map <F8> <Plug>MarkSet
 "  :GrepBuffer [<grep_options>] [<search_pattern>]
 "  :Bgrep [<grep_options>] [<search_pattern>]
 "  :GrepArgs [<grep_options>] [<search_pattern>]
-map <F3>    <esc>:Grep<cr>
-map <s-F3>  <esc>:Rgrep<cr>
-map <a-F3>  <esc>:GrepBuffer<cr>
+noremap <F3>    <esc>:Grep<cr>
+noremap <s-F3>  <esc>:Rgrep<cr>
+noremap <a-F3>  <esc>:GrepBuffer<cr>
 
 
 
@@ -162,32 +175,37 @@ map <a-F3>  <esc>:GrepBuffer<cr>
 " 自定义键映射
 " -----------------
 "  打开windows下的vim配置文件
-map <F12> <esc>:e ~/_vimrc<cr>
-map <c-F12> <esc>:e ~/.vimrc<cr>
+noremap <leader>er :split $MYVIMRC<cr>20<C-w>+
+noremap <F12> :split $MYVIMRC<cr>20<C-w>+
+noremap <leader>sr :source $MYVIMRC<cr>
 "  切换窗口
-map <F4>   <esc><c-w>j
-map <s-F4> <esc><c-w>k
-map <F6>   <esc><c-w>w
-map <s-F6> <esc><c-w>p
-map <a-F6>   <esc><c-w>h
-map <a-s-F6> <esc><c-w>l
+noremap <F4>   <esc><c-w>j
+noremap <s-F4> <esc><c-w>k
+noremap <F6>   <esc><c-w>w
+noremap <s-F6> <esc><c-w>p
+noremap <a-F6>   <esc><c-w>h
+noremap <a-s-F6> <esc><c-w>l
 
 "  切换tag list窗口
-map <c-F6> <esc>:Tlist<cr>
+noremap <c-F6> <esc>:Tlist<cr>
 
 "  关闭当前窗口
-map <c-F4> <esc><c-w>c
+noremap <c-F4> <esc><c-w>c
 
 "  调出符号ts命令
-map <c-N> <esc>:ts 
+noremap <c-N> <esc>:ts 
 
 "  兼容windows风格的保存
-map <c-s>  <esc>:w<cr>
+noremap <c-s>  <esc>:w<cr>
 "  快速向下翻页
-map <a-space> <esc><c-d>
-map <space> <esc><c-d>
-map <s-space> <esc><c-u>
-map <c-space> <esc><c-u>
+nmap <a-space> <esc><c-d>
+nmap <space> <esc><c-d>
+nmap <s-space> <esc><c-u>
+nmap <c-space> <esc><c-u>
+
+"  git operations
+nnoremap \gd :! git diff %<cr>
+nnoremap \gc :! git commit %<cr>
 
 " 调试期间为了方便查找vim的tag
 set tags=./tags,tags,d:\software\vim\vimfiles\tags
