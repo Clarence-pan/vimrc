@@ -1,4 +1,5 @@
 *~
 *.swp
 ctags
-/.vim/view/*
+.vim/view/*
+

@@ -3,42 +3,17 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_VERSION	5.8	//
 #	plugin/mark.vim	/^	nmap <unique> # <Plug>MarkSearchPrev$/;"	m
 *	plugin/mark.vim	/^	nmap <unique> * <Plug>MarkSearchNext$/;"	m
 0	syntax/hitest.vim	/^normal 0$/;"	m
-<C-Down>	plugin/minibufexpl.vim	/^  noremap <C-Down>  <C-W>j$/;"	m
-<C-H>	plugin/minibufexpl.vim	/^  noremap <C-H> <C-W>h$/;"	m
-<C-J>	plugin/minibufexpl.vim	/^  noremap <C-J> <C-W>j$/;"	m
-<C-K>	plugin/minibufexpl.vim	/^  noremap <C-K> <C-W>k$/;"	m
-<C-L>	plugin/minibufexpl.vim	/^  noremap <C-L> <C-W>l$/;"	m
-<C-Left>	plugin/minibufexpl.vim	/^  noremap <C-Left>  <C-W>h$/;"	m
-<C-Right>	plugin/minibufexpl.vim	/^  noremap <C-Right> <C-W>l$/;"	m
-<C-S-TAB>	plugin/minibufexpl.vim	/^  noremap <C-S-TAB> :call <SID>CycleBuffer(0)<CR>:<BS>$/;"	m
-<C-S-TAB>	plugin/minibufexpl.vim	/^  noremap <C-S-TAB> <C-W>W$/;"	m
-<C-TAB>	plugin/minibufexpl.vim	/^  noremap <C-TAB>   :call <SID>CycleBuffer(1)<CR>:<BS>$/;"	m
-<C-TAB>	plugin/minibufexpl.vim	/^  noremap <C-TAB>   <C-W>w$/;"	m
-<C-Up>	plugin/minibufexpl.vim	/^  noremap <C-Up>    <C-W>k$/;"	m
-<C-b>	plugin/ac_smooth_scroll.vim	/^  nmap <silent> <C-b> <Plug>(ac-smooth-scroll-c-b)$/;"	m
-<C-d>	plugin/ac_smooth_scroll.vim	/^  nmap <silent> <C-d> <Plug>(ac-smooth-scroll-c-d)$/;"	m
-<C-f>	plugin/ac_smooth_scroll.vim	/^  nmap <silent> <C-f> <Plug>(ac-smooth-scroll-c-f)$/;"	m
-<C-u>	plugin/ac_smooth_scroll.vim	/^  nmap <silent> <C-u> <Plug>(ac-smooth-scroll-c-u)$/;"	m
 <Leader>#	plugin/mark.vim	/^	nmap <unique> <Leader># <Plug>MarkSearchCurrentPrev$/;"	m
 <Leader>*	plugin/mark.vim	/^	nmap <unique> <Leader>* <Plug>MarkSearchCurrentNext$/;"	m
 <Leader>/	plugin/mark.vim	/^	nmap <unique> <Leader>\/ <Plug>MarkSearchAnyNext$/;"	m
 <Leader>?	plugin/mark.vim	/^	nmap <unique> <Leader>? <Plug>MarkSearchAnyPrev$/;"	m
 <Leader>m	plugin/mark.vim	/^	nmap <unique> <Leader>m <Plug>MarkSet$/;"	m
-<Leader>mbc	plugin/minibufexpl.vim	/^  map <unique> <Leader>mbc <Plug>CMiniBufExplorer$/;"	m
-<Leader>mbe	plugin/minibufexpl.vim	/^  map <unique> <Leader>mbe <Plug>MiniBufExplorer$/;"	m
-<Leader>mbt	plugin/minibufexpl.vim	/^  map <unique> <Leader>mbt <Plug>TMiniBufExplorer$/;"	m
-<Leader>mbu	plugin/minibufexpl.vim	/^  map <unique> <Leader>mbu <Plug>UMiniBufExplorer$/;"	m
 <Leader>n	plugin/mark.vim	/^	nmap <unique> <Leader>n <Plug>MarkClear$/;"	m
 <Leader>r	plugin/mark.vim	/^	nmap <unique> <Leader>r <Plug>MarkRegex$/;"	m
-<Plug>(ac-smooth-scroll-c-b)	plugin/ac_smooth_scroll.vim	/^nnoremap <silent> <Plug>(ac-smooth-scroll-c-b)$/;"	m
-<Plug>(ac-smooth-scroll-c-d)	plugin/ac_smooth_scroll.vim	/^nnoremap <silent> <Plug>(ac-smooth-scroll-c-d)$/;"	m
-<Plug>(ac-smooth-scroll-c-f)	plugin/ac_smooth_scroll.vim	/^nnoremap <silent> <Plug>(ac-smooth-scroll-c-f)$/;"	m
-<Plug>(ac-smooth-scroll-c-u)	plugin/ac_smooth_scroll.vim	/^nnoremap <silent> <Plug>(ac-smooth-scroll-c-u)$/;"	m
-<Plug>CMiniBufExplorer	plugin/minibufexpl.vim	/^noremap <unique> <script> <Plug>CMiniBufExplorer :call <SID>StopExplorer(1)<CR>:<BS>$/;"	m
 <Plug>MarkAllClear	plugin/mark.vim	/^nnoremap <silent> <Plug>MarkAllClear          :<C-u>call mark#ClearAll()<CR>$/;"	m
 <Plug>MarkClear	plugin/mark.vim	/^nnoremap <silent> <Plug>MarkClear             :<C-u>if !mark#DoMark(v:count, (v:count ? '' : mark#CurrentMark()[0]))[0]<Bar>execute "normal! \\<lt>C-\\>\\<lt>C-n>\\<lt>Esc>"<Bar>endif<CR>$/;"	m
 <Plug>MarkConfirmAllClear	plugin/mark.vim	/^nnoremap <silent> <Plug>MarkConfirmAllClear   :<C-u>if confirm('Really delete all marks? This cannot be undone.', "&Yes\\n&No") == 1<Bar>call mark#ClearAll()<Bar>endif<CR>$/;"	m
@@ -60,37 +35,20 @@
 <Plug>MarkSet	plugin/mark.vim	/^nnoremap <silent> <Plug>MarkSet               :<C-u>if !mark#MarkCurrentWord(v:count)<Bar>execute "normal! \\<lt>C-\\>\\<lt>C-n>\\<lt>Esc>"<Bar>endif<CR>$/;"	m
 <Plug>MarkSet	plugin/mark.vim	/^vnoremap <silent> <Plug>MarkSet               :<C-u>if !mark#DoMark(v:count, mark#GetVisualSelectionAsLiteralPattern())[0]<Bar>execute "normal! \\<lt>C-\\>\\<lt>C-n>\\<lt>Esc>"<Bar>endif<CR>$/;"	m
 <Plug>MarkToggle	plugin/mark.vim	/^nnoremap <silent> <Plug>MarkToggle            :<C-u>call mark#Toggle()<CR>$/;"	m
-<Plug>MiniBufExplorer	plugin/minibufexpl.vim	/^noremap <unique> <script> <Plug>MiniBufExplorer  :call <SID>StartExplorer(1, -1)<CR>:<BS>$/;"	m
-<Plug>TMiniBufExplorer	plugin/minibufexpl.vim	/^noremap <unique> <script> <Plug>TMiniBufExplorer :call <SID>ToggleExplorer()<CR>:<BS>$/;"	m
-<Plug>UMiniBufExplorer	plugin/minibufexpl.vim	/^noremap <unique> <script> <Plug>UMiniBufExplorer :call <SID>AutoUpdate(-1)<CR>:<BS>$/;"	m
 <SID>xx	plugin/taglist.vim	/^    map <SID>xx <SID>xx$/;"	m
-AcSmoothScrollCalcSkipRedrawLineSize	plugin/ac_smooth_scroll.vim	/^  function! AcSmoothScrollCalcSkipRedrawLineSize(key_count, skip_redraw_line_size)$/;"	f
-AcSmoothScrollCalcSleepTimeMsec	plugin/ac_smooth_scroll.vim	/^  function! AcSmoothScrollCalcSleepTimeMsec(key_count, sleep_time_msec)$/;"	f
-AcSmoothScrollCalcStep	plugin/ac_smooth_scroll.vim	/^  function! AcSmoothScrollCalcStep(key_count, wlcount)$/;"	f
 Accents	syntax/tex.vim	/^   fun! s:Accents(chr,...)$/;"	f
 Add	syntax/cucumber.vim	/^function! s:Add(name)$/;"	f
-Agrep	plugin/grep.vim	/^command! -nargs=* -complete=file Agrep$/;"	c
-AgrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file AgrepAdd$/;"	c
-Agrep_Path	plugin/grep.vim	/^    let Agrep_Path = 'agrep'$/;"	v
 AntSyntaxScript	syntax/ant.vim	/^    fun AntSyntaxScript(tagname, synfilename)$/;"	f
 AnyMark	autoload/mark.vim	/^function! s:AnyMark()$/;"	f
 AutoLoadMarks	plugin/mark.vim	/^	function! s:AutoLoadMarks()$/;"	f
-AutoUpdate	plugin/minibufexpl.vim	/^function! <SID>AutoUpdate(delBufNum)$/;"	f
-Bgrep	plugin/grep.vim	/^command! -nargs=* Bgrep$/;"	c
-BgrepAdd	plugin/grep.vim	/^command! -nargs=* BgrepAdd$/;"	c
-BuildBufferList	plugin/minibufexpl.vim	/^function! <SID>BuildBufferList(delBufNum, updateBufList)$/;"	f
 Builtin	syntax/reva.vim	/^com! -nargs=+ Builtin syn keyword revaBuiltin <args>$/;"	c
-CMiniBufExplorer	plugin/minibufexpl.vim	/^  command! CMiniBufExplorer  call <SID>StopExplorer(1)$/;"	c
 CSS1	syntax/2html.vim	/^function! s:CSS1(id)$/;"	f
 CfHiLink	syntax/cf.vim	/^command -nargs=+ CfHiLink hi def link <args>$/;"	c
 ClearMark	autoload/mark.vim	/^function! s:ClearMark( index )$/;"	f
 Cycle	autoload/mark.vim	/^function! s:Cycle( ... )$/;"	f
-CycleBuffer	plugin/minibufexpl.vim	/^function! <SID>CycleBuffer(forward)$/;"	f
-DEBUG	plugin/minibufexpl.vim	/^function! <SID>DEBUG(msg, level)$/;"	f
 DefineHighlightings	plugin/mark.vim	/^function! s:DefineHighlightings( palette, isOverride )$/;"	f
 DefineInlineMarkup	syntax/rst.vim	/^function! s:DefineInlineMarkup(name, start, middle, end)$/;"	f
 DefineOneInlineMarkup	syntax/rst.vim	/^function! s:DefineOneInlineMarkup(name, start, middle, end, char_left, char_right)$/;"	f
-DisplayBuffers	plugin/minibufexpl.vim	/^function! <SID>DisplayBuffers(delBufNum)$/;"	f
 Doxygen_Hilights	syntax/doxygen.vim	/^    fun! s:Doxygen_Hilights()$/;"	f
 Doxygen_Hilights_Base	syntax/doxygen.vim	/^    fun! s:Doxygen_Hilights_Base()$/;"	f
 DxyCreateSmallSpecial	syntax/doxygen.vim	/^  fun! s:DxyCreateSmallSpecial( kword, name )$/;"	f
@@ -98,18 +56,10 @@ EchoMark	autoload/mark.vim	/^function! s:EchoMark( groupNum, regexp )$/;"	f
 EchoMarkCleared	autoload/mark.vim	/^function! s:EchoMarkCleared( groupNum )$/;"	f
 EchoMarksDisabled	autoload/mark.vim	/^function! s:EchoMarksDisabled()$/;"	f
 EchoSearchPattern	autoload/mark.vim	/^	function! s:EchoSearchPattern( searchType, searchPattern, isBackward )$/;"	f
-Egrep	plugin/grep.vim	/^command! -nargs=* -complete=file Egrep$/;"	c
-EgrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file EgrepAdd$/;"	c
-Egrep_Path	plugin/grep.vim	/^    let Egrep_Path = 'egrep'$/;"	v
 EnableAndMarkScope	autoload/mark.vim	/^function! s:EnableAndMarkScope( indices, expr )$/;"	f
 ErrorMessage	autoload/mark.vim	/^function! s:ErrorMessage( searchType, searchPattern, isBackward )$/;"	f
 ErrorMsg	autoload/mark.vim	/^function! s:ErrorMsg( text, ... )$/;"	f
 EscapeText	autoload/mark.vim	/^function! s:EscapeText( text )$/;"	f
-Fgrep	plugin/grep.vim	/^command! -nargs=* -complete=file Fgrep$/;"	c
-FgrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file FgrepAdd$/;"	c
-Fgrep_Path	plugin/grep.vim	/^    let Fgrep_Path = 'fgrep'$/;"	v
-FindCreateWindow	plugin/minibufexpl.vim	/^function! <SID>FindCreateWindow(bufName, forceEdge, isExplorer, doDebug)$/;"	f
-FindWindow	plugin/minibufexpl.vim	/^function! <SID>FindWindow(bufName, doDebug)$/;"	f
 FoldColumn_build	syntax/2html.vim	/^  function! s:FoldColumn_build(char, len, numfill, char2, class, click)$/;"	f
 FoldColumn_fill	syntax/2html.vim	/^  function! s:FoldColumn_fill()$/;"	f
 FoldCompare	syntax/2html.vim	/^  function! s:FoldCompare(f1, f2)$/;"	f
@@ -119,34 +69,9 @@ GetAlternativeCount	autoload/mark.vim	/^function! s:GetAlternativeCount( pattern
 GetMarker	autoload/mark.vim	/^function! s:GetMarker( index, nextGroupIndex )$/;"	f
 GetNextGroupIndex	autoload/mark.vim	/^function! s:GetNextGroupIndex()$/;"	f
 GetPalette	plugin/mark.vim	/^function! s:GetPalette()$/;"	f
-GetSelectedBuffer	plugin/minibufexpl.vim	/^function! <SID>GetSelectedBuffer()$/;"	f
 Greek	syntax/tex.vim	/^  fun! s:Greek(group,pat,cchar)$/;"	f
-Grep	plugin/grep.vim	/^command! -nargs=* -complete=file Grep$/;"	c
-GrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file GrepAdd$/;"	c
-GrepArgs	plugin/grep.vim	/^command! -nargs=* GrepArgs$/;"	c
-GrepArgsAdd	plugin/grep.vim	/^command! -nargs=* GrepArgsAdd$/;"	c
-GrepBuffer	plugin/grep.vim	/^command! -nargs=* GrepBuffer$/;"	c
-GrepBufferAdd	plugin/grep.vim	/^command! -nargs=* GrepBufferAdd$/;"	c
-Grep_Cygwin_Find	plugin/grep.vim	/^    let Grep_Cygwin_Find = 0$/;"	v
-Grep_Default_Filelist	plugin/grep.vim	/^    let Grep_Default_Filelist = '*'$/;"	v
-Grep_Default_Options	plugin/grep.vim	/^    let Grep_Default_Options = ''$/;"	v
-Grep_Find_Path	plugin/grep.vim	/^    let Grep_Find_Path = 'find'$/;"	v
-Grep_Find_Use_Xargs	plugin/grep.vim	/^    let Grep_Find_Use_Xargs = 1$/;"	v
-Grep_Null_Device	plugin/grep.vim	/^        let Grep_Null_Device = 'NUL'$/;"	v
-Grep_Null_Device	plugin/grep.vim	/^        let Grep_Null_Device = '\/dev\/null'$/;"	v
-Grep_OpenQuickfixWindow	plugin/grep.vim	/^    let Grep_OpenQuickfixWindow = 1$/;"	v
-Grep_Path	plugin/grep.vim	/^    let Grep_Path = 'grep'$/;"	v
-Grep_Shell_Escape_Char	plugin/grep.vim	/^        let Grep_Shell_Escape_Char = ''$/;"	v
-Grep_Shell_Escape_Char	plugin/grep.vim	/^        let Grep_Shell_Escape_Char = '\\'$/;"	v
-Grep_Shell_Quote_Char	plugin/grep.vim	/^        let Grep_Shell_Quote_Char = "'"$/;"	v
-Grep_Shell_Quote_Char	plugin/grep.vim	/^        let Grep_Shell_Quote_Char = ''$/;"	v
-Grep_Skip_Dirs	plugin/grep.vim	/^    let Grep_Skip_Dirs = 'RCS CVS SCCS'$/;"	v
-Grep_Skip_Files	plugin/grep.vim	/^    let Grep_Skip_Files = '*~ *,v s.*'$/;"	v
-Grep_Xargs_Options	plugin/grep.vim	/^    let Grep_Xargs_Options = '-0'$/;"	v
-Grep_Xargs_Path	plugin/grep.vim	/^    let Grep_Xargs_Path = 'xargs'$/;"	v
 GroovyHiLink	syntax/groovy.vim	/^  command! -nargs=+ GroovyHiLink hi def link <args>$/;"	c
 GroovyHiLink	syntax/groovy.vim	/^  command! -nargs=+ GroovyHiLink hi link <args>$/;"	c
-HasEligibleBuffers	plugin/minibufexpl.vim	/^function! <SID>HasEligibleBuffers(delBufNum)$/;"	f
 HasVariablePersistence	autoload/mark.vim	/^function! s:HasVariablePersistence()$/;"	f
 Hi	syntax/sdl.vim	/^	command -nargs=+ Hi     hi <args>$/;"	c
 Hi	syntax/sdl.vim	/^	command -nargs=+ Hi     hi def <args>$/;"	c
@@ -820,12 +745,6 @@ IsIgnoreCase	autoload/mark.vim	/^function! s:IsIgnoreCase( expr )$/;"	f
 IsRegexpValid	autoload/mark.vim	/^function! s:IsRegexpValid( expr )$/;"	f
 JavaHiLink	syntax/java.vim	/^  command! -nargs=+ JavaHiLink hi def link <args>$/;"	c
 JavaHiLink	syntax/java.vim	/^  command! -nargs=+ JavaHiLink hi link <args>$/;"	c
-MBEClick	plugin/minibufexpl.vim	/^function! s:MBEClick()$/;"	f
-MBEDeleteBuffer	plugin/minibufexpl.vim	/^function! <SID>MBEDeleteBuffer()$/;"	f
-MBEDoubleClick	plugin/minibufexpl.vim	/^function! s:MBEDoubleClick()$/;"	f
-MBESelectBuffer	plugin/minibufexpl.vim	/^function! <SID>MBESelectBuffer()$/;"	f
-MBEbn	plugin/minibufexpl.vim	/^  command! MBEbn call <SID>CycleBuffer(1)$/;"	c
-MBEbp	plugin/minibufexpl.vim	/^  command! MBEbp call <SID>CycleBuffer(0)$/;"	c
 MakeDirectGroupMappings	plugin/mark.vim	/^function! s:MakeDirectGroupMappings()$/;"	f
 Mark	autoload/mark.vim	/^augroup Mark$/;"	a
 Mark	plugin/mark.vim	/^command! -bang -range=0 -nargs=? -complete=customlist,mark#Complete Mark if <bang>0 | silent call mark#DoMark(<count>, '') | endif | if !mark#SetMark(<count>, <f-args>)[0] | echoerr v:errmsg | endif$/;"	c
@@ -839,25 +758,9 @@ MarkPaletteComplete	plugin/mark.vim	/^function! s:MarkPaletteComplete( ArgLead, 
 MarkSave	plugin/mark.vim	/^command! -bar -nargs=? -complete=customlist,mark#MarksVariablesComplete MarkSave call mark#SaveCommand(<f-args>)$/;"	c
 MarkScope	autoload/mark.vim	/^function! s:MarkScope( indices, expr )$/;"	f
 Marks	plugin/mark.vim	/^command! -bar Marks call mark#List()$/;"	c
-Max	plugin/minibufexpl.vim	/^function! <SID>Max(argOne, argTwo)$/;"	f
-MiniBufExplorer	plugin/minibufexpl.vim	/^  command! MiniBufExplorer  call <SID>StartExplorer(1, -1)$/;"	c
-MiniBufExplorer	plugin/minibufexpl.vim	/^augroup MiniBufExplorer$/;"	a
 NoMarkErrorMessage	autoload/mark.vim	/^function! s:NoMarkErrorMessage()$/;"	f
 PrintMarkGroup	autoload/mark.vim	/^function! s:PrintMarkGroup( nextGroupIndex )$/;"	f
 ProgressBar	syntax/2html.vim	/^  func! s:ProgressBar(title, max_value, winnr)$/;"	f
-Ragrep	plugin/grep.vim	/^command! -nargs=* -complete=file Ragrep$/;"	c
-RagrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file RagrepAdd$/;"	c
-Regrep	plugin/grep.vim	/^command! -nargs=* -complete=file Regrep$/;"	c
-RegrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file RegrepAdd$/;"	c
-ResizeWindow	plugin/minibufexpl.vim	/^function! <SID>ResizeWindow()$/;"	f
-Rfgrep	plugin/grep.vim	/^command! -nargs=* -complete=file Rfgrep$/;"	c
-RfgrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file RfgrepAdd$/;"	c
-Rgrep	plugin/grep.vim	/^command! -nargs=* -complete=file Rgrep$/;"	c
-RgrepAdd	plugin/grep.vim	/^command! -nargs=* -complete=file RgrepAdd$/;"	c
-RunGrep	plugin/grep.vim	/^function! s:RunGrep(cmd_name, grep_cmd, action, ...)$/;"	f
-RunGrepCmd	plugin/grep.vim	/^function! s:RunGrepCmd(cmd, pattern, action)$/;"	f
-RunGrepRecursive	plugin/grep.vim	/^function! s:RunGrepRecursive(cmd_name, grep_cmd, action, ...)$/;"	f
-RunGrepSpecial	plugin/grep.vim	/^function! s:RunGrepSpecial(cmd_name, which, action, ...)$/;"	f
 SavePattern	autoload/mark.vim	/^function! s:SavePattern( ... )$/;"	f
 Search	autoload/mark.vim	/^function! s:Search( pattern, count, isBackward, currentMarkPosition, searchType )$/;"	f
 SetIsk	syntax/bst.vim	/^    command -nargs=1 SetIsk set iskeyword=<args>$/;"	c
@@ -867,10 +770,7 @@ SetIsk	syntax/lilo.vim	/^  command -nargs=1 SetIsk setlocal iskeyword=<args>$/;"
 SetMark	autoload/mark.vim	/^function! s:SetMark( index, regexp, ... )$/;"	f
 SetPalette	plugin/mark.vim	/^function! s:SetPalette( paletteName )$/;"	f
 SetPattern	autoload/mark.vim	/^function! s:SetPattern( index, pattern )$/;"	f
-ShowBuffers	plugin/minibufexpl.vim	/^function! <SID>ShowBuffers(delBufNum)$/;"	f
 SplitIntoAlternatives	autoload/mark.vim	/^function! s:SplitIntoAlternatives( pattern )$/;"	f
-StartExplorer	plugin/minibufexpl.vim	/^function! <SID>StartExplorer(sticky, delBufNum)$/;"	f
-StopExplorer	plugin/minibufexpl.vim	/^function! <SID>StopExplorer(sticky)$/;"	f
 SuperSub	syntax/tex.vim	/^  fun! s:SuperSub(group,leader,pat,cchar)$/;"	f
 SynColor	syntax/doxygen.vim	/^    command -nargs=+ SynColor hi def <args>$/;"	c
 SynColor	syntax/syncolor.vim	/^    command -nargs=* SynColor hi <args>$/;"	c
@@ -885,7 +785,6 @@ SynLink	syntax/syncolor.vim	/^    command -nargs=* SynLink hi def link <args>$/;
 SynLink	syntax/syncolor.vim	/^    command -nargs=* SynLink hi! link <args>$/;"	c
 SynLink	syntax/syncolor.vim	/^  command -nargs=* SynLink hi link <args>$/;"	c
 SynSet	syntax/synload.vim	/^fun! s:SynSet()$/;"	f
-TMiniBufExplorer	plugin/minibufexpl.vim	/^  command! TMiniBufExplorer  call <SID>ToggleExplorer()$/;"	c
 TagList_IsValid	plugin/taglist.vim	/^function! TagList_IsValid()$/;"	f
 TagList_Start	plugin/taglist.vim	/^function! TagList_Start()$/;"	f
 TagList_WrapUp	plugin/taglist.vim	/^function! TagList_WrapUp()$/;"	f
@@ -1022,15 +921,11 @@ Tlist_Window_Toggle_Help_Text	plugin/taglist.vim	/^function! s:Tlist_Window_Togg
 Tlist_Window_Update_File	plugin/taglist.vim	/^function! s:Tlist_Window_Update_File()$/;"	f
 Tlist_Window_Update_Line_Offsets	plugin/taglist.vim	/^function! s:Tlist_Window_Update_Line_Offsets(start_idx, increment, offset)$/;"	f
 Tlist_Window_Zoom	plugin/taglist.vim	/^function! s:Tlist_Window_Zoom()$/;"	f
-ToggleExplorer	plugin/minibufexpl.vim	/^function! <SID>ToggleExplorer()$/;"	f
 Trim	autoload/mark.vim	/^	function! s:Trim( message )$/;"	f
-UMiniBufExplorer	plugin/minibufexpl.vim	/^  command! UMiniBufExplorer  call <SID>AutoUpdate(-1)$/;"	c
 WarningMsg	autoload/mark.vim	/^function! s:WarningMsg( text )$/;"	f
 WrapMessage	autoload/mark.vim	/^	function! s:WrapMessage( searchType, searchPattern, isBackward )$/;"	f
 Xf86confdeclopt	syntax/xf86conf.vim	/^	command -nargs=+ Xf86confdeclopt syn keyword xf86confOptionName <args> contained nextgroup=xf86confValue,xf86confComment skipwhite$/;"	c
 Xf86confdeclopt	syntax/xf86conf.vim	/^	command -nargs=+ Xf86confdeclopt syn keyword xf86confOptionName <args> contained$/;"	c
-ac	autoload/ac_smooth_scroll.vim	/^augroup ac-smooth-scroll-dummy-group$/;"	a
-ac_smooth_scroll#scroll	autoload/ac_smooth_scroll.vim	/^function! ac_smooth_scroll#scroll(cmd, windiv, sleep_time_msec, is_vmode)$/;"	f
 afold	syntax/2html.vim	/^	  let afold.firstline = g:html_start_line$/;"	v
 afold	syntax/2html.vim	/^	let afold.firstline = g:html_start_line$/;"	v
 afold	syntax/2html.vim	/^      let afold.level -= leveladjust$/;"	v
@@ -1678,9 +1573,6 @@ b:vera_minlines	syntax/vera.vim	/^  let b:vera_minlines = vera_minlines$/;"	v
 b:xf86conf_xfree86_version	syntax/xf86conf.vim	/^		let b:xf86conf_xfree86_version = 4$/;"	v
 b:xf86conf_xfree86_version	syntax/xf86conf.vim	/^		let b:xf86conf_xfree86_version = xf86conf_xfree86_version$/;"	v
 base	syntax/2html.vim	/^      let base = 0.01 * w$/;"	v
-calc_skip_redraw_line_size	autoload/ac_smooth_scroll.vim	/^function! s:calc_skip_redraw_line_size()$/;"	f
-calc_sleep_time_msec	autoload/ac_smooth_scroll.vim	/^function! s:calc_sleep_time_msec(sleep_time_msec)$/;"	f
-calc_step	autoload/ac_smooth_scroll.vim	/^function! s:calc_step(wlcount)$/;"	f
 chars	syntax/xpm.vim	/^	 let chars = escape(chars, '\/\\*^$.~[]')$/;"	v
 chars	syntax/xpm.vim	/^	 let chars = substitute(chars, '.$', '', '')$/;"	v
 chars	syntax/xpm.vim	/^	 let chars = substitute(s, '"\\(.\\{'.cpp.'}\\s\\).*"', '\\1', '')$/;"	v
@@ -2062,7 +1954,6 @@ did_xs_syntax_inits	syntax/xs.vim	/^    let did_xs_syntax_inits = 1$/;"	v
 did_xxd_syntax_inits	syntax/xxd.vim	/^    let did_xxd_syntax_inits = 1$/;"	v
 did_z8a_syntax_inits	syntax/z8a.vim	/^    let did_z8a_syntax_inits = 1$/;"	v
 diffstyle	syntax/2html.vim	/^  let diffstyle =$/;"	v
-doautocmd_user	autoload/ac_smooth_scroll.vim	/^function! s:doautocmd_user(command)$/;"	f
 dosbatch_cmdextversion	syntax/dosbatch.vim	/^  let dosbatch_cmdextversion = 2$/;"	v
 doxygengroup	syntax/doxygen.vim	/^    aug doxygengroup$/;"	a
 filename	syntax/sql.vim	/^        let filename = b:sql_type_override$/;"	v
@@ -2071,13 +1962,6 @@ filename	syntax/sql.vim	/^let filename = 'sqloracle'$/;"	v
 fortran_free_source	syntax/sinda.vim	/^let fortran_free_source=1$/;"	v
 fortran_free_source	syntax/tak.vim	/^let fortran_free_source=1$/;"	v
 fortran_free_source	syntax/trasys.vim	/^let fortran_free_source=1$/;"	v
-g:ac_smooth_scroll_disable_relativenumber	plugin/ac_smooth_scroll.vim	/^let g:ac_smooth_scroll_disable_relativenumber = get(g:, 'g:ac_smooth_scroll_disable_relativenumber', 1)$/;"	v
-g:ac_smooth_scroll_du_sleep_time_msec	plugin/ac_smooth_scroll.vim	/^let g:ac_smooth_scroll_du_sleep_time_msec = get(g:, 'ac_smooth_scroll_du_sleep_time_msec', 10)$/;"	v
-g:ac_smooth_scroll_enable_accelerating	plugin/ac_smooth_scroll.vim	/^let g:ac_smooth_scroll_enable_accelerating = get(g:, 'ac_smooth_scroll_enable_accelerating', 1)$/;"	v
-g:ac_smooth_scroll_fb_sleep_time_msec	plugin/ac_smooth_scroll.vim	/^let g:ac_smooth_scroll_fb_sleep_time_msec = get(g:, 'ac_smooth_scroll_fb_sleep_time_msec', 10)$/;"	v
-g:ac_smooth_scroll_max_limit_msec	plugin/ac_smooth_scroll.vim	/^let g:ac_smooth_scroll_max_limit_msec = get(g:, 'ac_smooth_scroll_max_limit_msec', 300)$/;"	v
-g:ac_smooth_scroll_min_limit_msec	plugin/ac_smooth_scroll.vim	/^let g:ac_smooth_scroll_min_limit_msec = get(g:, 'ac_smooth_scroll_min_limit_msec', 50)$/;"	v
-g:ac_smooth_scroll_skip_redraw_line_size	plugin/ac_smooth_scroll.vim	/^let g:ac_smooth_scroll_skip_redraw_line_size = get(g:, 'ac_smooth_scroll_skip_redraw_line_size', 0)$/;"	v
 g:context_include	syntax/context.vim	/^  let g:context_include = ['mp', 'javascript', 'xml']$/;"	v
 g:cucumber_languages	syntax/cucumber.vim	/^let g:cucumber_languages = {$/;"	v
 g:doxygen_end_punctuation	syntax/doxygen.vim	/^      let g:doxygen_end_punctuation='[.]'$/;"	v
@@ -2088,34 +1972,8 @@ g:is_kornshell	syntax/sh.vim	/^  let g:is_kornshell = 1$/;"	v
 g:is_posix	syntax/sh.vim	/^  let g:is_posix = 1$/;"	v
 g:liquid_default_subtype	syntax/liquid.vim	/^  let g:liquid_default_subtype = 'html'$/;"	v
 g:liquid_highlight_types	syntax/liquid.vim	/^  let g:liquid_highlight_types = []$/;"	v
-g:loaded_ac_smooth_scroll	plugin/ac_smooth_scroll.vim	/^let g:loaded_ac_smooth_scroll = 1$/;"	v
 g:loaded_mark	plugin/mark.vim	/^let g:loaded_mark = 1$/;"	v
 g:markdown_fenced_languages	syntax/markdown.vim	/^  let g:markdown_fenced_languages = []$/;"	v
-g:miniBufExplBufList	plugin/minibufexpl.vim	/^  let g:miniBufExplBufList = ''$/;"	v
-g:miniBufExplDoneClickSave	plugin/minibufexpl.vim	/^    let  g:miniBufExplDoneClickSave = 1$/;"	v
-g:miniBufExplForceDisplay	plugin/minibufexpl.vim	/^  let g:miniBufExplForceDisplay = 0$/;"	v
-g:miniBufExplForceSyntaxEnable	plugin/minibufexpl.vim	/^  let g:miniBufExplForceSyntaxEnable = 0$/;"	v
-g:miniBufExplInAutoUpdate	plugin/minibufexpl.vim	/^  let g:miniBufExplInAutoUpdate = 0$/;"	v
-g:miniBufExplMapCTabSwitchBufs	plugin/minibufexpl.vim	/^  let g:miniBufExplMapCTabSwitchBufs = 0$/;"	v
-g:miniBufExplMapCTabSwitchWindows	plugin/minibufexpl.vim	/^  let g:miniBufExplMapCTabSwitchWindows = 0$/;"	v
-g:miniBufExplMapWindowNav	plugin/minibufexpl.vim	/^  let g:miniBufExplMapWindowNav = 0$/;"	v
-g:miniBufExplMapWindowNavArrows	plugin/minibufexpl.vim	/^  let g:miniBufExplMapWindowNavArrows = 0$/;"	v
-g:miniBufExplMapWindowNavVim	plugin/minibufexpl.vim	/^  let g:miniBufExplMapWindowNavVim = 0$/;"	v
-g:miniBufExplMaxHeight	plugin/minibufexpl.vim	/^  let g:miniBufExplMaxHeight = 0$/;"	v
-g:miniBufExplMaxSize	plugin/minibufexpl.vim	/^  let g:miniBufExplMaxSize = g:miniBufExplMaxHeight$/;"	v
-g:miniBufExplMinHeight	plugin/minibufexpl.vim	/^  let g:miniBufExplMinHeight = 1$/;"	v
-g:miniBufExplMinSize	plugin/minibufexpl.vim	/^  let g:miniBufExplMinSize = g:miniBufExplMinHeight$/;"	v
-g:miniBufExplModSelTarget	plugin/minibufexpl.vim	/^  let g:miniBufExplModSelTarget = 0$/;"	v
-g:miniBufExplSplitBelow	plugin/minibufexpl.vim	/^  let g:miniBufExplSplitBelow = &splitbelow$/;"	v
-g:miniBufExplSplitToEdge	plugin/minibufexpl.vim	/^  let g:miniBufExplSplitToEdge = 1$/;"	v
-g:miniBufExplTabWrap	plugin/minibufexpl.vim	/^  let g:miniBufExplTabWrap = 0$/;"	v
-g:miniBufExplUseSingleClick	plugin/minibufexpl.vim	/^  let g:miniBufExplUseSingleClick = 0$/;"	v
-g:miniBufExplVSplit	plugin/minibufexpl.vim	/^  let g:miniBufExplVSplit = 0$/;"	v
-g:miniBufExplorerAutoUpdate	plugin/minibufexpl.vim	/^  let g:miniBufExplorerAutoUpdate = 0$/;"	v
-g:miniBufExplorerDebugLevel	plugin/minibufexpl.vim	/^  let g:miniBufExplorerDebugLevel = 0 $/;"	v
-g:miniBufExplorerDebugMode	plugin/minibufexpl.vim	/^  let g:miniBufExplorerDebugMode = 3 $/;"	v
-g:miniBufExplorerDebugOutput	plugin/minibufexpl.vim	/^  let g:miniBufExplorerDebugOutput = ''$/;"	v
-g:miniBufExplorerMoreThanOne	plugin/minibufexpl.vim	/^  let g:miniBufExplorerMoreThanOne = 2$/;"	v
 g:mwAutoLoadMarks	plugin/mark.vim	/^	let g:mwAutoLoadMarks = 0$/;"	v
 g:mwAutoSaveMarks	plugin/mark.vim	/^	let g:mwAutoSaveMarks = 1$/;"	v
 g:mwDefaultHighlightingNum	plugin/mark.vim	/^	let g:mwDefaultHighlightingNum = -1$/;"	v
@@ -2135,7 +1993,6 @@ g:vimsyn_noerror	syntax/vim.vim	/^ let g:vimsyn_noerror= g:vimsyntax_noerror$/;"
 gdb_minlines	syntax/gdb.vim	/^  let gdb_minlines = 10$/;"	v
 generate_suffix_groups	syntax/hostconf.vim	/^function s:generate_suffix_groups(list_of_order_of_orders, context, trailing_context)$/;"	f
 get_256color	syntax/dircolors.vim	/^function! s:get_256color(colors) abort$/;"	f
-get_elapsed_time	autoload/ac_smooth_scroll.vim	/^function! s:get_elapsed_time(cmd, windiv)$/;"	f
 get_hi_str	syntax/dircolors.vim	/^function! s:get_hi_str(color, place) abort$/;"	f
 groovy_minlines	syntax/groovy.vim	/^  let groovy_minlines = 10$/;"	v
 highlight_types	syntax/spup.vim	/^    let highlight_types = 1$/;"	v
@@ -2158,8 +2015,6 @@ jproperties_strict_syntax	syntax/jproperties.vim	/^	let jproperties_strict_synta
 leveladjust	syntax/2html.vim	/^	    let leveladjust += 1$/;"	v
 leveladjust	syntax/2html.vim	/^    let leveladjust -= 1$/;"	v
 leveladjust	syntax/2html.vim	/^  let leveladjust = 0$/;"	v
-loaded_grep	plugin/grep.vim	/^let loaded_grep = 1$/;"	v
-loaded_minibufexplorer	plugin/minibufexpl.vim	/^let loaded_minibufexplorer = 1$/;"	v
 loaded_taglist	plugin/taglist.vim	/^            let loaded_taglist = 'no'$/;"	v
 loaded_taglist	plugin/taglist.vim	/^        let loaded_taglist = 'no'$/;"	v
 loaded_taglist	plugin/taglist.vim	/^    let loaded_taglist = 'fast_load_done'$/;"	v
@@ -2360,15 +2215,12 @@ s:c_primary_tag_handle	syntax/yaml.vim	/^let s:c_primary_tag_handle   = '!'$/;"	
 s:c_secondary_tag_handle	syntax/yaml.vim	/^let s:c_secondary_tag_handle = '!!'$/;"	v
 s:c_tag_handle	syntax/yaml.vim	/^let s:c_tag_handle = '\\%('.s:c_named_tag_handle.$/;"	v
 s:c_verbatim_tag	syntax/yaml.vim	/^let s:c_verbatim_tag = '!<'.s:ns_uri_char.'\\+>'$/;"	v
-s:cache_command	autoload/ac_smooth_scroll.vim	/^let s:cache_command = {}$/;"	v
-s:clickmap	plugin/minibufexpl.vim	/^  let s:clickmap = ':if bufname("%") == "-MiniBufExplorer-" <bar> call <SID>MBEClick() <bar> endif <CR>'$/;"	v
 s:col	syntax/2html.vim	/^	let s:col = s:col + 1$/;"	v
 s:col	syntax/2html.vim	/^    let s:col = 1$/;"	v
 s:commands	syntax/wget.vim	/^let s:commands = map([$/;"	v
 s:concealinfo	syntax/2html.vim	/^	let s:concealinfo = synconcealed(s:lnum, s:col)$/;"	v
 s:concealinfo	syntax/2html.vim	/^    let s:concealinfo = [0, '']$/;"	v
 s:cpo_sav	syntax/2html.vim	/^let s:cpo_sav = &cpo$/;"	v
-s:cpo_save	plugin/grep.vim	/^let s:cpo_save = &cpo$/;"	v
 s:cpo_save	plugin/taglist.vim	/^    let s:cpo_save = &cpo$/;"	v
 s:cpo_save	syntax/a2ps.vim	/^let s:cpo_save = &cpo$/;"	v
 s:cpo_save	syntax/aap.vim	/^let s:cpo_save = &cpo$/;"	v
@@ -2533,7 +2385,6 @@ s:cterm_color	syntax/2html.vim	/^    let s:cterm_color = {$/;"	v
 s:current_syntax	syntax/2html.vim	/^  let s:current_syntax = 'none'$/;"	v
 s:current_syntax	syntax/2html.vim	/^  let s:current_syntax = b:current_syntax$/;"	v
 s:current_syntax	syntax/2html.vim	/^  let s:current_syntax = w:current_syntax$/;"	v
-s:debugIndex	plugin/minibufexpl.vim	/^let s:debugIndex = 0 $/;"	v
 s:delims	syntax/perl6.vim	/^let s:delims = [$/;"	v
 s:did_ft	syntax/syntax.vim	/^  let s:did_ft = 0$/;"	v
 s:did_ft	syntax/syntax.vim	/^  let s:did_ft = 1$/;"	v
@@ -2616,7 +2467,6 @@ s:keepcpo	syntax/tex.vim	/^let s:keepcpo= &cpo$/;"	v
 s:keepcpo	syntax/valgrind.vim	/^let s:keepcpo= &cpo$/;"	v
 s:keepcpo	syntax/vim.vim	/^let s:keepcpo= &cpo$/;"	v
 s:kernels	syntax/debcontrol.vim	/^let s:kernels = '\\%(linux\\|hurd\\|kfreebsd\\|knetbsd\\|kopensolaris\\|netbsd\\)'$/;"	v
-s:key_count	autoload/ac_smooth_scroll.vim	/^let s:key_count = 0$/;"	v
 s:keywords	syntax/perl6.vim	/^let s:keywords = {$/;"	v
 s:lazyredraw	syntax/hitest.vim	/^let s:lazyredraw  = &lazyredraw$/;"	v
 s:len	syntax/2html.vim	/^	  let s:len = &columns$/;"	v
@@ -2642,12 +2492,8 @@ s:lnum	syntax/2html.vim	/^  let s:lnum = s:lnum + 1$/;"	v
 s:ls	syntax/2html.vim	/^let s:ls  = &ls$/;"	v
 s:luapath	syntax/vim.vim	/^   let s:luapath= fnameescape(s:luapath)$/;"	v
 s:luapath	syntax/vim.vim	/^let s:luapath= fnameescape(expand("<sfile>:p:h")."\/lua.vim")$/;"	v
-s:m	plugin/minibufexpl.vim	/^    let  s:m = ':nnoremap <silent> <LEFTMOUSE> <LEFTMOUSE>'$/;"	v
-s:m	plugin/minibufexpl.vim	/^    let  s:m = s:m . s:clickmap$/;"	v
-s:m	plugin/minibufexpl.vim	/^    let  s:m = s:m . substitute(substitute(maparg('<LEFTMOUSE>', 'n'), '|', '<bar>', 'g'), '\\c^<LEFTMOUSE>', '', '')$/;"	v
 s:margin	syntax/2html.vim	/^  let s:margin = 0$/;"	v
 s:margin	syntax/2html.vim	/^  let s:margin = strlen(s:end) + 1$/;"	v
-s:maxTabWidth	plugin/minibufexpl.vim	/^let s:maxTabWidth = 0 $/;"	v
 s:menu_char_prefix	plugin/taglist.vim	/^let s:menu_char_prefix =$/;"	v
 s:mmssff_pattern	syntax/cdrtoc.vim	/^let s:mmssff_pattern = '\\%([0-5]\\d\\|\\d\\):\\%([0-5]\\d\\|\\d\\):\\%([0-6]\\d\\|7[0-5]\\|\\d\\)\\>'$/;"	v
 s:more	syntax/hitest.vim	/^let s:more	  = &more$/;"	v
@@ -2754,8 +2600,6 @@ s:report	syntax/hitest.vim	/^let s:report      = &report$/;"	v
 s:routines	syntax/perl6.vim	/^let s:routines = [$/;"	v
 s:rubypath	syntax/vim.vim	/^   let s:rubypath= fnameescape(s:rubypath)$/;"	v
 s:rubypath	syntax/vim.vim	/^let s:rubypath= fnameescape(expand("<sfile>:p:h")."\/ruby.vim")$/;"	v
-s:save_cpo	autoload/ac_smooth_scroll.vim	/^let s:save_cpo = &cpo$/;"	v
-s:save_cpo	plugin/ac_smooth_scroll.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	plugin/mark.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	syntax/euphoria3.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	syntax/euphoria4.vim	/^let s:save_cpo = &cpo$/;"	v
@@ -2880,7 +2724,6 @@ s:wsh_cpo_save	syntax/wsh.vim	/^let s:wsh_cpo_save = &cpo$/;"	v
 s:xml_cpo_save	syntax/xml.vim	/^let s:xml_cpo_save = &cpo$/;"	v
 s:zsh_syntax_variables	syntax/zsh.vim	/^  let s:zsh_syntax_variables = 'all'$/;"	v
 s:zsh_syntax_variables	syntax/zsh.vim	/^  let s:zsh_syntax_variables = g:zsh_syntax_variables$/;"	v
-scroll	autoload/ac_smooth_scroll.vim	/^function! s:scroll(cmd, step, sleep_time_msec, skip_redraw_line_size, wlcount, is_vmode)$/;"	f
 sed_delimiter	syntax/sed.vim	/^    let __sed_delimiter = escape(nr2char(__sed_i), __sed_metacharacters)$/;"	v
 sed_i	syntax/sed.vim	/^	let __sed_i = __sed_i + 1$/;"	v
 sed_i	syntax/sed.vim	/^    let __sed_i = __sed_i + 1$/;"	v
