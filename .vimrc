@@ -217,4 +217,3 @@ let g:winManagerWindowLayout='FileExplorer|TagList'
 " 帮助语言中文
 set helplang=cn
 
-

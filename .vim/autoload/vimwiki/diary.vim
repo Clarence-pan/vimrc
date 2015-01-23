@@ -355,4 +355,3 @@ function vimwiki#diary#calendar_sign(day, month, year) "{{{
 endfunction "}}}
 
 " Calendar.vim }}}
-

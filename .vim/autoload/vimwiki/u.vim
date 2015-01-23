@@ -74,4 +74,3 @@ function! vimwiki#u#path_common_pfx(path1, path2) "{{{
     return join(p1[: idx-1], '/')
   endif
 endfunction "}}}
-
