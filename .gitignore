@@ -2,3 +2,5 @@
 *.swp
 ctags
 /.vim/view/*
+.netrwhist
+
