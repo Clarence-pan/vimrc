@@ -1,5 +1,5 @@
 *~
 *.swp
 ctags
-/.vim/view/*
-.netrwhist
+.vim/view/*
+
