@@ -217,3 +217,7 @@ let g:winManagerWindowLayout='FileExplorer|TagList'
 " 帮助语言中文
 set helplang=cn
 
+" 折叠 -- fold
+" zo/zO -- 打开折叠
+" zc/zC -- 关闭折叠
+set foldmethod=indent
