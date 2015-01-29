@@ -1,0 +1,27 @@
+
+
+- 切输入法 <C-SPACE> <C-S>
+- 移动光标 
+    - 上 <UP>   VIM: j E:<C-n>
+    - 下 <DOWN> VIM: k E:<C-p>
+    - 左 <LEFT> VIM: h E:<C-b>
+    - 右 <RIGHT> VIM: l E:<C-f>
+    - 翻页 <PAGEUP>/<PAGEDOWN> VIM:<C-f>/<C-b>
+    - 半翻页                   VIM:<C-d>/<C-u>
+- 查找 
+	- VIM: /<something> ?<something>
+	- E: <C-s>
+- 替换
+	- VIM: :%s/<pattern>/<replacement>
+	- E: 
+- 查找文件（根据文件名）
+- 在文件中查找引用
+- 根据符号跳转到定义
+- 列编辑
+    - 在每行开头加上xx
+    - 在每行开头删除xx
+- 多窗口
+	- 分割窗口
+	- 切换窗口
+		- VIM: <C-w><hjkl> -- 切换到指定方向的窗口
+		- E: 
